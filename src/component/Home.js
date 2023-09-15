@@ -26,7 +26,7 @@ const Home = ({ isDarkMode}) => {
         <motion.div 
          animate={{ y: [0, -10, 0], opacity: [1, 0.8, 1] }}
          transition={{
-           duration: 0.3,
+           duration: 1.5,
            repeat: Infinity,
            repeatType: "reverse", // This creates the up and down effect
          }}
