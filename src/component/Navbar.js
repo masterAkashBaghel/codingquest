@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/Logo.png'
 import { BsSun } from 'react-icons/bs';
 import { MdOutlineDarkMode } from 'react-icons/md';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link} from 'react-router-dom';
  
 
 const Navbar = ({toggleDarkMode,isDarkMode}) => {
@@ -18,11 +18,13 @@ const Navbar = ({toggleDarkMode,isDarkMode}) => {
   return (
     <div className={`  ${isDarkMode ? 'bg-[#054275] text-white' : 'bg-white text-black'} hello`}> 
       <div className='container mx-auto px-4 py-2 flex  lg:justify-around  md:justify-between sm:justify-between items-center'>
-        <div className='flex items-center'>
+       <Link to="/">
+       <div className='flex items-center'>
           {/* Logo */}
           <img className='h-[80px]' src={logo} alt='logo' />
           <h1 className=' font-bold lg:text-2xl md:text-xl sm:text-lg'>{logos}</h1>
         </div>
+       </Link>
         {/* Hamburger Menu (for small and extra-small screens) */}
         <div className='absolute right-2 lg:hidden'>
           <button
